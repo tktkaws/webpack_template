@@ -1,0 +1,22 @@
+{
+  "siteInfo": {
+    "name": "テンプレート（画像圧縮あり）",
+    "siteUrl": "./"
+  },
+  "pages": {
+    "home": {
+      "name": "トップページ",
+      "description": "サイトの説明",
+      "type": "website",
+      "slug": "../",
+      "path": "./"
+    },
+    "about": {
+      "name": "aboutページ",
+      "description": "aboutページの説明",
+      "type": "article",
+      "slug": "about/about.html",
+      "path": "../"
+    }
+  }
+}

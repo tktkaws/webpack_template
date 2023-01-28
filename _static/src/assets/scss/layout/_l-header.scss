@@ -1,0 +1,29 @@
+/* header
+----------------------------------------- */
+@use '../global' as *;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: rem(120);
+  padding: rem(32) rem(60);
+  background-color: rgba(0, 0, 0, 0);
+
+  @include flex(space-between, center, row);
+}
+
+.l-header__inner {
+  width: 100%;
+
+  @include flex(space-between, center, row);
+}
+
+.l-header__logo {
+  width: rem(120);
+}
+
+.l-header__logoLink {
+}

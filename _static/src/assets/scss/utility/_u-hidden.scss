@@ -1,0 +1,21 @@
+@use '../global' as *;
+
+// ===========================
+// hidden
+// ===========================
+
+.u-only-sp {
+  display: block;
+
+  @include responsive(md) {
+    display: none;
+  }
+}
+
+.u-only-pc {
+  display: none;
+
+  @include responsive(md) {
+    display: block;
+  }
+}

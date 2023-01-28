@@ -1,0 +1,15 @@
+# exe ファイルは要らない
+\*.exe
+# bin フォルダは要らない
+bin/
+node_modules/
+static/src/assets/images/
+_static/dist/
+
+# nuget.exe は必用なファイル
+!/.nuget/nuget.exe
+# パッケージフォルダ内の .ts ファイルは要らない
+package/\*_/_.ts
+
+*.jpg
+*.png

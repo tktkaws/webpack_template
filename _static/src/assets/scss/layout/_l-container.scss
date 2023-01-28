@@ -1,0 +1,14 @@
+/* container
+----------------------------------------- */
+@use '../global' as *;
+
+.l-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 rem(20);
+
+  @include responsive(md) {
+    padding: 0 rem(80);
+  }
+}

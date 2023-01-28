@@ -1,0 +1,108 @@
+@use 'sass:math';
+@use 'variables' as var;
+
+// ===========================
+// font
+// ===========================
+@mixin font($fsz: 16, $lh: 25, $fw: 400, $ls: 0.05, $uni: rem) {
+  $linS: math.div($lh, $fsz);
+  font-size: #{math.div($fsz, 10)} + $uni;
+  font-weight: $fw;
+  line-height: $linS;
+  letter-spacing: #{math.div($ls, 1000)} + 'em';
+}
+
+// ===========================
+// media query
+// ===========================
+@mixin responsive($breakpoint) {
+  @media #{map-get(var.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// breakpoint 370px〜768px
+@mixin xs {
+  @media screen and (min-width: 370px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+// breakpoint 769px〜1024px
+@mixin md {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+// breakpoint 769px〜1180px
+@mixin md-2 {
+  @media screen and (min-width: 769px) and (max-width: 1180px) {
+    @content;
+  }
+}
+
+// breakpoint 1025px〜1366px
+@mixin lg {
+  @media screen and (min-width: 1025px) and (max-width: 1366px) {
+    @content;
+  }
+}
+
+// ===========================
+// flex
+// ===========================
+@mixin flex($jc, $ai, $fd) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+}
+// @include flex(flex-start, center, row);
+
+// ===========================
+// aspect(要素の縦横比)
+// ===========================
+@mixin img($width, $height) {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    display: block;
+    padding-top: round((($height / $width) * 100%) * 100) / 100;
+    content: '';
+  }
+}
+// @include img(500,500); → 縦横比 1:1
+
+// ===========================
+// clearfix(floatの解除)
+// ===========================
+@mixin clear {
+  &::after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: ' ';
+  }
+}
+
+// ===========================
+// 表示行数の制御
+// ===========================
+@mixin line-clamp($count: 3) {
+  // 引数が数値以外だったらエラーを返す
+  @if type-of($count) != 'number' {
+    @error 'line-clampの引数は必ず数値で指定してください';
+  }
+
+  @if $count == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

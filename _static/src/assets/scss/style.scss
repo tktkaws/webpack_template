@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// component
+//
+// 汎用モジュール
+//
+@use 'component';
+
+// External
+//
+// 外部ライブラリ上書き用
+//
+@use 'external';
+
+// foundation
+//
+// ベース系
+//
+@use 'foundation';
+
+// layout
+//
+// レイアウト
+//
+@use 'layout';
+
+// project
+//
+// 専用モジュール
+//
+@use 'project';
+
+// utility
+//
+// 調整
+//
+@use 'utility';
+
+// vendors
+//
+// 外部ライブラリ読み込み
+//
+@use 'vendors';

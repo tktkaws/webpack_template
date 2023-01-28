@@ -1,0 +1,33 @@
+<% let path = jsonData.pages[pageId].path %>
+<!-- header -->
+<header id="js-header" class="l-header">
+  <div class="l-header__inner">
+    <!-- header-logo -->
+    <h1 class="l-header__logo">
+      <a href="<%= path %>" class="l-header__logoLink">
+        <img src="<%= path %>assets/images/common/header_logo.svg" alt="ロゴ" />
+      </a>
+    </h1>
+    <!-- /header-logo -->
+    <!-- header-nav-toggle -->
+    <button id="js-hamburger-toggle" type="button" class="l-hamburger__toggle">
+      <div class="l-hamburger__toggleWrap">
+        <span class="l-hamburger__toggleLine"></span>
+        <span class="l-hamburger__toggleLine"></span>
+        <span class="l-hamburger__toggleLine"></span>
+      </div>
+    </button>
+    <!-- /header-nav-toggle -->
+    <!-- header-menu -->
+    <!-- <div id="js-menu-bg" class="l-menu-bg"></div> -->
+    <nav id="js-menu" class="l-menu">
+      <ul class="l-menu__list">
+        <li class="l-menu__item">
+          <a href="<%= path %>about" class="l-menu__link"><%= jsonData.pages.about.name %></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /header-menu -->
+  </div>
+</header>
+<!-- /header -->

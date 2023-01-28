@@ -1,0 +1,187 @@
+/* test
+----------------------------------------- */
+@use '../global' as *;
+@use 'sass:math';
+
+/*==============================================================
+Common
+==============================================================*/
+
+.l-section {
+  padding: rem(80) 0;
+}
+
+/*==============================================================
+Img(lodading='lazy')
+==============================================================*/
+
+.p-img__title {
+  margin: 0 0 rem(24) 0;
+  text-align: center;
+
+  @include font(16, 20, 600, 100, rem);
+  @include responsive(md) {
+    @include font(22, 26, 600, 100, rem);
+  }
+}
+
+.p-img__inner {
+  figure {
+    margin: 0 0 rem(12) 0;
+
+    @include img(335, 214);
+    @include responsive(md) {
+      margin: 0 0 rem(16) 0;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      font-family: 'object-fit: cover;';
+
+      object-fit: cover;
+    }
+  }
+}
+
+.p-img__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include responsive(md) {
+    margin: 0 rem(-15);
+
+    @include flex(flex-start, flex-start, row);
+  }
+}
+
+.p-img__item {
+  width: 100%;
+  margin: rem(24) 0;
+
+  @include responsive(md) {
+    width: math.div(100%, 3);
+    margin: rem(32) 0;
+    padding: 0 rem(15);
+  }
+}
+
+.p-img__content {
+}
+
+.p-img__contentTitle {
+  @include font(15, 18, 400, 50, rem);
+}
+
+/*==============================================================
+Splide
+==============================================================*/
+.p-home-mv {
+  .splide {
+    position: relative;
+    height: 100%;
+    .splide__track {
+      height: 100%;
+      .splide__list {
+        .splide__slide {
+          height: 100%;
+          figure {
+            height: 100%;
+            &::before {
+              display: none;
+            }
+            img {
+              position: unset;
+              min-height: 720px;
+              font-family: 'object-fit: cover;';
+
+              object-fit: cover;
+              object-position: bottom;
+            }
+          }
+        }
+      }
+    }
+    .my-slider-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      transform: translate(0%, 0%);
+    }
+
+    .my-slider-progress-bar {
+      width: 0;
+      height: rem(10);
+      background: #b09f7c;
+      transition: width 400ms ease;
+    }
+  }
+}
+
+.splide-slider {
+  background-color: #f2efe1;
+  &.l-section {
+    padding: rem(120) 0;
+    .splide-slider-title {
+      margin: 0 0 rem(40) 0;
+      text-align: center;
+
+      @include font(16, 20, 600, 100, rem);
+      @include responsive(md) {
+        @include font(22, 26, 600, 100, rem);
+      }
+    }
+  }
+}
+
+.splide__track {
+}
+
+.splide__list {
+}
+
+.splide__slide {
+  figure {
+    @include img(300, 200);
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      font-family: 'object-fit: cover;';
+
+      object-fit: cover;
+    }
+  }
+}
+
+/*==============================================================
+Modal
+==============================================================*/
+
+.c-modal__inner {
+  @include responsive(md) {
+    margin: 0 rem(-15) 0;
+
+    @include flex(flex-start, flex-start, row);
+  }
+}
+
+.c-modal__wrap {
+  @include responsive(md) {
+    width: 50%;
+    padding: 0 rem(15);
+  }
+}

@@ -1,0 +1,82 @@
+@use 'sass:math';
+@use '../global' as *;
+
+// ===========================
+// base
+// ===========================
+
+html {
+  font-size: 62.5%;
+
+@include md {
+    font-size: math.div(100vw, 102.4);
+  }
+
+@include lg {
+    font-size: math.div(100vw, 144);
+  }
+
+  }
+
+* {
+  font-family: $font-family-base;
+
+-webkit-font-smoothing: antialiased;
+
+  }
+
+body {
+  overflow-x: hidden;
+
+height: 100%;
+
+color: $color-text;
+
+counter-reset: number 0;
+
+letter-spacing: 0.1em;
+
+font-weight: 400;
+
+font-size: rem(16);
+
+font-family: $font-family-base;
+
+line-height: 1.15;
+
+overscroll-behavior: none;
+
+// font-feature-settings: 'palt' 1;
+  font-kerning: normal;
+
+-webkit-font-smoothing: antialiased;
+
+-webkit-text-size-adjust: 100%;
+
+  }
+
+.wrap {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+// キーボード操作"以外"でフォーカスされた時はoutlineを消す
+.js-focus-visible:focus:not(.focus-visible) {
+  outline: 0;
+}
+
+// スマホではフォーカス時のアウトライン削除
+*:focus-visible {
+  outline: none;
+
+@include responsive(md) {
+    outline-style: auto;
+
+outline-color: -webkit-focus-ring-color;
+
+    }
+
+  }

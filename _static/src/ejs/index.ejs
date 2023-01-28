@@ -1,0 +1,316 @@
+<% let pageId = 'home'; %> <% let path = jsonData.pages[pageId].path %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('./common/_head', {pageId:pageId }) %>
+  <body class="home">
+    <div id="top" class="wrap" ontouchstart="">
+      <%- include('./common/_header', {pageId:pageId }) %>
+      <!-- main -->
+      <main class="l-main">
+        <article>
+          <!-- main visual -->
+          <div id="js-mv" class="p-home-mv">
+            <div id="splide2" class="splide" aria-label="carousel">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <figure>
+                      <picture>
+                        <source srcset="<%= path %>assets/images/test/splide_img01.webp" type="image/webp" />
+                        <source srcset="<%= path %>assets/images/test/splide_img01.jpg" type="image/jpg" />
+                        <img src="<%= path %>assets/images/test/splide_img01.jpg" alt="" />
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="splide__slide">
+                    <figure>
+                      <picture>
+                        <source srcset="<%= path %>assets/images/test/splide_img02.webp" type="image/webp" />
+                        <source srcset="<%= path %>assets/images/test/splide_img02.jpg" type="image/jpg" />
+                        <img src="<%= path %>assets/images/test/splide_img02.jpg" alt="" />
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="splide__slide">
+                    <figure>
+                      <picture>
+                        <source srcset="<%= path %>assets/images/test/splide_img03.webp" type="image/webp" />
+                        <source srcset="<%= path %>assets/images/test/splide_img03.jpg" type="image/jpg" />
+                        <img src="<%= path %>assets/images/test/splide_img03.jpg" alt="" />
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="splide__slide">
+                    <figure>
+                      <picture>
+                        <source srcset="<%= path %>assets/images/test/splide_img04.webp" type="image/webp" />
+                        <source srcset="<%= path %>assets/images/test/splide_img04.jpg" type="image/jpg" />
+                        <img src="<%= path %>assets/images/test/splide_img04.jpg" alt="" />
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="splide__slide">
+                    <figure>
+                      <picture>
+                        <source srcset="<%= path %>assets/images/test/splide_img05.webp" type="image/webp" />
+                        <source srcset="<%= path %>assets/images/test/splide_img05.jpg" type="image/jpg" />
+                        <img src="<%= path %>assets/images/test/splide_img05.jpg" alt="" />
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="splide__slide">
+                    <figure>
+                      <picture>
+                        <source srcset="<%= path %>assets/images/test/splide_img06.webp" type="image/webp" />
+                        <source srcset="<%= path %>assets/images/test/splide_img06.jpg" type="image/jpg" />
+                        <img src="<%= path %>assets/images/test/splide_img06.jpg" alt="" />
+                      </picture>
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+              <!-- progress-bar -->
+              <div class="my-slider-progress">
+                <div class="my-slider-progress-bar"></div>
+              </div>
+              <!-- /progress-bar -->
+            </div>
+          </div>
+          <!-- /main visual -->
+          <!-- section-test -->
+          <div class="p-test-section">
+            <!-- section-modal -->
+            <section class="modal l-section">
+              <div class="l-container">
+                <div class="c-modal__inner">
+                  <section class="c-modal__wrap">
+                    <div class="c-modal__openInner">
+                      <div class="c-modal__openWrap">
+                        <button class="c-modal__open" data-custom-open="modal-1" role="button">Modal Open</button>
+                      </div>
+                    </div>
+                    <div id="modal-1" class="c-modal" aria-hidden="true">
+                      <div class="c-modal__overlay" tabindex="-1" data-custom-close="modal-1">
+                        <div class="c-modal__container green" role="dialog" aria-modal="true" aria-labelleady="modal-1-title">
+                          <header class="c-modal__header">
+                            <h2 id="modal-1-title" class="c-modal__title">Modal①</h2>
+                            <button class="c-modal__closeIcon" data-custom-close="modal-1" aria-label="close modal"></button>
+                          </header>
+                          <div id="modal-1-content" class="c-modal__content">
+                            <p class="c-modal__text">This is a completely accessible modal.</p>
+                            <p class="c-modal__text">Try hitting the tab key* and notice how the focus stays within the modal itself. To close modal hit the esc button, click on the overlay or just click the close button.</p>
+                          </div>
+                          <button class="c-modal__close" data-custom-close="modal-1" aria-label="close modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="c-modal__wrap">
+                    <div class="c-modal__openInner pink">
+                      <div class="c-modal__openWrap">
+                        <button class="c-modal__open pink" data-custom-open="modal-2" role="button">Modal Open</button>
+                      </div>
+                    </div>
+                    <div id="modal-2" class="c-modal" aria-hidden="true">
+                      <div class="c-modal__overlay" tabindex="-1" data-custom-close="modal-2">
+                        <div class="c-modal__container pink" role="dialog" aria-modal="true" aria-labelleady="modal-2-title">
+                          <header class="c-modal__header">
+                            <h2 id="modal-2-title" class="c-modal__title">Modal②</h2>
+                            <button class="c-modal__closeIcon" data-custom-close="modal-2" aria-label="close modal"></button>
+                          </header>
+                          <div id="modal-2-content" class="c-modal__content">
+                            <p class="c-modal__text">This is a completely accessible modal.</p>
+                            <p class="c-modal__text">Try hitting the tab key* and notice how the focus stays within the modal itself. To close modal hit the esc button, click on the overlay or just click the close button.</p>
+                          </div>
+                          <button class="c-modal__close" data-custom-close="modal-2" aria-label="close modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+            <!-- /section-modal -->
+            <!-- section-loading-lazy -->
+            <section class="img-lazy l-section">
+              <div class="l-container">
+                <h2 class="p-img__title">loading="lazy"の確認</h2>
+                <div class="p-img__inner">
+                  <ul class="p-img__list">
+                    <li class="p-img__item">
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/images/test/test_img01.webp" type="image/webp" />
+                          <source srcset="<%= path %>assets/images/test/test_img01.jpg" type="image/jpg" />
+                          <img src="<%= path %>assets/images/test/test_img01.jpg" width="690" height="440" loading="lazy" alt="" />
+                        </picture>
+                      </figure>
+                      <div class="p-img__content">
+                        <h3 class="p-img__contentTitle">サンプル画像です</h3>
+                      </div>
+                    </li>
+                    <li class="p-img__item">
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/images/test/test_img02.webp" type="image/webp" />
+                          <source srcset="<%= path %>assets/images/test/test_img02.jpg" type="image/jpg" />
+                          <img src="<%= path %>assets/images/test/test_img02.jpg" width="690" height="440" loading="lazy" alt="" />
+                        </picture>
+                      </figure>
+                      <div class="p-img__content">
+                        <h3 class="p-img__contentTitle">サンプル画像です</h3>
+                      </div>
+                    </li>
+                    <li class="p-img__item">
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/images/test/test_img03.webp" type="image/webp" />
+                          <source srcset="<%= path %>assets/images/test/test_img03.jpg" type="image/jpg" />
+                          <img src="<%= path %>assets/images/test/test_img03.jpg" width="690" height="440" loading="lazy" alt="" />
+                        </picture>
+                      </figure>
+                      <div class="p-img__content">
+                        <h3 class="p-img__contentTitle">サンプル画像です</h3>
+                      </div>
+                    </li>
+                    <li class="p-img__item">
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/images/test/test_img04.webp" type="image/webp" />
+                          <source srcset="<%= path %>assets/images/test/test_img04.jpg" type="image/jpg" />
+                          <img src="<%= path %>assets/images/test/test_img04.jpg" width="690" height="440" loading="lazy" alt="" />
+                        </picture>
+                      </figure>
+                      <div class="p-img__content">
+                        <h3 class="p-img__contentTitle">サンプル画像です</h3>
+                      </div>
+                    </li>
+                    <li class="p-img__item">
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/images/test/test_img05.webp" type="image/webp" />
+                          <source srcset="<%= path %>assets/images/test/test_img05.jpg" type="image/jpg" />
+                          <img src="<%= path %>assets/images/test/test_img05.jpg" width="690" height="440" loading="lazy" alt="" />
+                        </picture>
+                      </figure>
+                      <div class="p-img__content">
+                        <h3 class="p-img__contentTitle">サンプル画像です</h3>
+                      </div>
+                    </li>
+                    <li class="p-img__item">
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/images/test/test_img06.webp" type="image/webp" />
+                          <source srcset="<%= path %>assets/images/test/test_img06.jpg" type="image/jpg" />
+                          <img src="<%= path %>assets/images/test/test_img06.jpg" width="690" height="440" loading="lazy" alt="" />
+                        </picture>
+                      </figure>
+                      <div class="p-img__content">
+                        <h3 class="p-img__contentTitle">サンプル画像です</h3>
+                      </div>
+                    </li>
+                    <li class="p-img__item">
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/images/test/test_img07.webp" type="image/webp" />
+                          <source srcset="<%= path %>assets/images/test/test_img07.jpg" type="image/jpg" />
+                          <img src="<%= path %>assets/images/test/test_img07.jpg" width="690" height="440" loading="lazy" alt="" />
+                        </picture>
+                      </figure>
+                      <div class="p-img__content">
+                        <h3 class="p-img__contentTitle">サンプル画像です</h3>
+                      </div>
+                    </li>
+                    <li class="p-img__item">
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/images/test/test_img08.webp" type="image/webp" />
+                          <source srcset="<%= path %>assets/images/test/test_img08.jpg" type="image/jpg" />
+                          <img src="<%= path %>assets/images/test/test_img08.jpg" width="690" height="440" loading="lazy" alt="" />
+                        </picture>
+                      </figure>
+                      <div class="p-img__content">
+                        <h3 class="p-img__contentTitle">サンプル画像です</h3>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <!-- /section-loading-lazy -->
+            <!-- section-splide -->
+            <section class="splide-slider l-section">
+              <div class="l-container">
+                <h2 class="splide-slider-title">Splideのテスト実装</h2>
+                <div id="splide1" class="splide" aria-label="Splideのテスト実装">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <figure>
+                          <picture>
+                            <source srcset="<%= path %>assets/images/test/splide_img01.webp" type="image/webp" />
+                            <source srcset="<%= path %>assets/images/test/splide_img01.jpg" type="image/jpg" />
+                            <img src="<%= path %>assets/images/test/splide_img01.jpg" width="300" height="200" loading="lazy" alt="" />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="splide__slide">
+                        <figure>
+                          <picture>
+                            <source srcset="<%= path %>assets/images/test/splide_img02.webp" type="image/webp" />
+                            <source srcset="<%= path %>assets/images/test/splide_img02.jpg" type="image/jpg" />
+                            <img src="<%= path %>assets/images/test/splide_img02.jpg" width="300" height="200" loading="lazy" alt="" />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="splide__slide">
+                        <figure>
+                          <picture>
+                            <source srcset="<%= path %>assets/images/test/splide_img03.webp" type="image/webp" />
+                            <source srcset="<%= path %>assets/images/test/splide_img03.jpg" type="image/jpg" />
+                            <img src="<%= path %>assets/images/test/splide_img03.jpg" width="300" height="200" loading="lazy" alt="" />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="splide__slide">
+                        <figure>
+                          <picture>
+                            <source srcset="<%= path %>assets/images/test/splide_img04.webp" type="image/webp" />
+                            <source srcset="<%= path %>assets/images/test/splide_img04.jpg" type="image/jpg" />
+                            <img src="<%= path %>assets/images/test/splide_img04.jpg" width="300" height="200" loading="lazy" alt="" />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="splide__slide">
+                        <figure>
+                          <picture>
+                            <source srcset="<%= path %>assets/images/test/splide_img05.webp" type="image/webp" />
+                            <source srcset="<%= path %>assets/images/test/splide_img05.jpg" type="image/jpg" />
+                            <img src="<%= path %>assets/images/test/splide_img05.jpg" width="300" height="200" loading="lazy" alt="" />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="splide__slide">
+                        <figure>
+                          <picture>
+                            <source srcset="<%= path %>assets/images/test/splide_img06.webp" type="image/webp" />
+                            <source srcset="<%= path %>assets/images/test/splide_img06.jpg" type="image/jpg" />
+                            <img src="<%= path %>assets/images/test/splide_img06.jpg" width="300" height="200" loading="lazy" alt="" />
+                          </picture>
+                        </figure>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- /section-splide -->
+          </div>
+          <!-- /section-test -->
+        </article>
+      </main>
+      <!-- /main -->
+      <%- include('./common/_footer', {pageId:pageId }) %> <%- include('./common/_script', {pageId:pageId }) %> <%- include('./common/script/_script-top', {pageId:pageId }) %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<% let pageId = 'about'; %> <% let path = jsonData.pages[pageId].path %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/_head', {pageId:pageId }) %>
+  <body class="">
+    <div class="wrap" ontouchstart="">
+      <%- include('../common/_header', {pageId:pageId }) %>
+      <!-- main -->
+      <main class="l-main">
+        <article>
+          <!-- section-about -->
+          <section class="p-about">
+            <div class="l-container"></div>
+          </section>
+          <!-- /section-about -->
+        </article>
+      </main>
+      <!-- /main -->
+      <%- include('../common/_footer', {pageId:pageId }) %> <%- include('../common/_script', {pageId:pageId }) %>
+    </div>
+  </body>
+</html>
